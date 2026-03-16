@@ -1,0 +1,13 @@
+data_path: data/raw/7282_1.csv
+
+text_column: reviews.text
+target_column: reviews.rating
+
+test_size: 0.2
+random_state: 42
+
+tfidf:
+  max_features: 5000
+
+clustering:
+  n_clusters: 5
