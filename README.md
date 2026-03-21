@@ -56,23 +56,48 @@ Rating nằm trong khoảng **1 đến 5**.
 
 DATA_MINING_PROJECT
 │
-├── configs
+├── configs/                  # File cấu hình tham số (YAML)
 │   └── params.yaml
 │
-├── data
-│   ├── raw
-│   │   └── 7282_1.csv
-│   └── processed
+├── data/                     # Dataset đầu vào
 │
-├── notebooks
-│   ├── 01_eda.ipynb
+├── notebooks/                # Notebook phân tích & thử nghiệm
 │   ├── 02_preprocess_feature.ipynb
 │   ├── 03_mining_clustering.ipynb
 │   ├── 04_modeling.ipynb
 │   └── 05_evaluation_report.ipynb
 │
-├── README.md
-├── requirements.txt
+├── src/                      # Source code chính
+│   ├── data/                 # Load & xử lý dữ liệu
+│   │   └── loader.py
+│   │
+│   ├── features/             # Feature engineering (TF-IDF)
+│   │   └── builder.py
+│   │
+│   ├── mining/               # Thuật toán khai phá dữ liệu
+│   │   ├── clustering.py
+│   │   └── association.py
+│   │
+│   └── models/               # (tuỳ chọn) model ML nâng cao
+│
+├── scripts/                  # Script chạy pipeline
+│   ├── run_pipeline.py       # Chạy toàn bộ pipeline chính
+│   └── run_papermill.py      # Chạy notebook tự động
+│
+├── outputs/                  # Kết quả đầu ra
+│   ├── figures/              # Biểu đồ (PCA, cluster, ...)
+│   │   └── cluster_visualization.png
+│   │
+│   ├── tables/               # Bảng dữ liệu kết quả
+│   │   ├── clustering_results.csv
+│   │   └── labels.csv
+│   │
+│   └── models/               # Model đã huấn luyện
+│       ├── kmeans_model.pkl
+│       └── tfidf_vectorizer.pkl
+│
+├── requirements.txt          # Thư viện cần cài đặt
+└── README.md                 # Mô tả project
 
 
 ## 4. Quy trình khai phá dữ liệu
