@@ -56,48 +56,48 @@ Rating nằm trong khoảng **1 đến 5**.
 
 DATA_MINING_PROJECT
 │
-├── configs/                  # File cấu hình tham số (YAML)
+├── configs/                  
 │   └── params.yaml
 │
-├── data/                     # Dataset đầu vào
+├── data/                     
 │
-├── notebooks/                # Notebook phân tích & thử nghiệm
+├── notebooks/                
 │   ├── 02_preprocess_feature.ipynb
 │   ├── 03_mining_clustering.ipynb
 │   ├── 04_modeling.ipynb
 │   └── 05_evaluation_report.ipynb
 │
-├── src/                      # Source code chính
-│   ├── data/                 # Load & xử lý dữ liệu
+├── src/                      
+│   ├── data/                 
 │   │   └── loader.py
 │   │
-│   ├── features/             # Feature engineering (TF-IDF)
+│   ├── features/             
 │   │   └── builder.py
 │   │
-│   ├── mining/               # Thuật toán khai phá dữ liệu
+│   ├── mining/               
 │   │   ├── clustering.py
 │   │   └── association.py
 │   │
-│   └── models/               # (tuỳ chọn) model ML nâng cao
+│   └── models/               
 │
-├── scripts/                  # Script chạy pipeline
-│   ├── run_pipeline.py       # Chạy toàn bộ pipeline chính
-│   └── run_papermill.py      # Chạy notebook tự động
+├── scripts/                  
+│   ├── run_pipeline.py       
+│   └── run_papermill.py      
 │
-├── outputs/                  # Kết quả đầu ra
-│   ├── figures/              # Biểu đồ (PCA, cluster, ...)
+├── outputs/                  
+│   ├── figures/
 │   │   └── cluster_visualization.png
 │   │
-│   ├── tables/               # Bảng dữ liệu kết quả
+│   ├── tables/
 │   │   ├── clustering_results.csv
 │   │   └── labels.csv
 │   │
-│   └── models/               # Model đã huấn luyện
+│   └── models/              
 │       ├── kmeans_model.pkl
 │       └── tfidf_vectorizer.pkl
 │
-├── requirements.txt          # Thư viện cần cài đặt
-└── README.md                 # Mô tả project
+├── requirements.txt          
+└── README.md                 
 
 
 ## 4. Quy trình khai phá dữ liệu
